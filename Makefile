@@ -37,3 +37,12 @@ test:
 
 clear_cache:
 	python manage.py clear_cache
+
+docker-build:
+	docker build -t swapi .
+
+docker-run:
+	docker run -p8000:8000  --name swapi-local-container --rm swapi
+
+docker-kill:
+	docker kill swapi-local-container
